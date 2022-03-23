@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <title>Login Form CSS</title>
+</head>
+
+<body>
+    <header>
+        <img src="./images/logo.svg" alt="Logo favicon">
+    </header>
+
+    <main>
+        <section id="left">
+            <div class="view-form">
+                <form action="">
+                    <div class="title-login">
+                        <img src="./images/log-in.svg" alt="log in">
+                        <h1>Faça seu login</h1>
+                    </div>
+                    <span>Entre com suas informações de cadastro</span>
+
+                    <fieldset>
+                        <label for="email">E-mail:</label>
+                        <div class="view-input">
+                            <img src="./images/mail.svg" alt="mail" class="img-input-one">
+                            <img src="./images/mail-focus.svg" alt="mail" class="img-input-two">
+                            <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="password">Senha:</label>
+                        <div class="view-input">
+                            <img src="./images/lock.svg" alt="lock" class="img-input-one">
+                            <img src="./images/lock-focus.svg" alt="lock" class="img-input-two">
+                            <input type="password" name="password" id="password" placeholder="Digite sua senha">
+                            <img src="./images/eye.svg" alt="eye">
+                        </div>
+                    </fieldset>
+
+                    <div class="view-check-reset">
+                        <div class="checkbox">
+                            <input type="checkbox" id="checkbox">
+                            <label for="checkbox">Lembre-me</label>
+                        </div>
+
+                        <a href="#" class="reset">Esqueci minha senha</a>
+                    </div>
+
+                    <button class="button-login">ENTRAR</button>
+
+                    <p class="sign-in">
+                        Não tem uma conta? <a href="#">Registre-se</a>
+                    </p>
+                </form>
+            </div>
+        </section>
+
+        <section id="right">
+            <img src="./images/side-image.jpg" alt="side image">
+        </section>
+    </main>
+</body>
+
+</html>

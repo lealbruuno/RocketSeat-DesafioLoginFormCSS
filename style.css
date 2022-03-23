@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
+
+:root {
+    --text-base: #afb6c2;
+    --text-title: #d4ccb6;
+    --background: #191816;
+    --form-background: #24221f;
+    --primary-color: #ffc632;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--background);
+}
+
+header {
+    padding: 40px 0 0 25px;
+    position: absolute;
+}
+
+header img {
+    height: 30px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 100vh;
+    width: 100%;
+}
+
+section{
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-form {
+    background-color: var(--form-background);
+
+    width: 450px;
+    height: 420px;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 2s linear;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.title-login {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.title-login h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--text-title);
+}
+
+span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-base);
+    margin: 5px 0 20px 0;
+}
+
+fieldset {
+    border: none;
+    margin: 0 0 15px 0;
+}
+
+label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-base);
+}
+
+.view-input {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid var(--text-base);
+    gap: 0.5rem;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.view-input:focus-within {
+    border: 2px solid var(--primary-color);
+}
+
+.img-input-two{
+    display: none;
+}
+
+.view-input:focus-within .img-input-one {
+    display: none;
+}
+
+.view-input:focus-within .img-input-two {
+    display: inline;
+}
+
+#email, #password {
+    outline: none;
+    border: none;
+    background: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-base);
+    width: 100%;
+}
+
+#email::placeholder, #password::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-base);
+}
+
+.view-check-reset {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.checkbox label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-base);
+}
+
+.checkbox #checkbox {
+    display: none;
+}
+
+.checkbox #checkbox + label::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    background-color: var(--form-background);
+    border: 1px solid var(--text-base);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+.checkbox #checkbox:checked + label::before {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    background-image: url(./assets/check.svg);
+    background-position: center;
+}
+
+.reset {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.button-login {
+    background-color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--background);
+    border: none;
+    width: 300px;
+    height: 45px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.sign-in {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--primary-color);
+    width: 300px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.sign-in a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+#right img {
+    transition: all 2s linear;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 950px) {
+    #left {
+        width: 100%;
+    }
+
+    #right{
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .view-form {
+        width: 100%;
+        background-color: var(--background);
+    }
+}
